@@ -1,14 +1,13 @@
-const express = require("express")
-require('dotenv').config()
+const express = require("express");
+const allproductsRoutes = require("./routes/nproducts.routes");
+
+require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000;
 
-
-app.get("/", (req, res) => {
-    res.json({ msg: "Hello" })
-})
+app.use("/", allproductsRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running at ${PORT}`);
-})
+});
