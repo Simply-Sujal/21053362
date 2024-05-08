@@ -6,7 +6,7 @@ const getProducts = async (req, res) => {
         const { top, minPrice, maxPrice } = req.query;
 
         // Fetch product data from each company's API
-        const companies = ['AMZ', 'COMPANY2', 'COMPANY3', 'COMPANY4', 'COMPANY5'];
+        const companies = ['AMZ', 'FLP', 'MYN', 'SNP', 'AZO'];
         const topProducts = [];
 
         for (const company of companies) {
